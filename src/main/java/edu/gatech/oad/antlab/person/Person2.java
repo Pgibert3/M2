@@ -39,7 +39,6 @@ public class Person2 {
         characters[randomIndex] = temp;
     }
 	return new String(characters);
-    }
 	}
 	/**
 	 * Return a string rep of this object
