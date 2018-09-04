@@ -45,7 +45,7 @@ public class Person3 {
 	  String reversename = "";
 	  for(int x = input.length(); x > 0; x--)
 	  {
-	  	reversename.concat(input.charAt(x));
+	  	reversename.concat(input.charAt(x-1));
 	  }
 	  return reversename;
 	}
