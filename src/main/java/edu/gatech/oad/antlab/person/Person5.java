@@ -31,10 +31,9 @@ public class Person5 {
 	 */
 	private String calc(String input) {
 	  //Person 5 put your implementation here
-	  String nString = input.substring(2, input.length());
-
-      nString = nString + input.substring(0,2);
-      return nString;
+	    String nString = input.substring(2, input.length());
+        nString = nString + input.substring(0,2);
+        return nString;
 	}
 
 	/**
