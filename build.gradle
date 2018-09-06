@@ -4,22 +4,21 @@
  * This is a general purpose Gradle build.
  * Learn how to create Gradle builds at https://guides.gradle.org/creating-new-gradle-builds/
  */
+ apply plugin: 'java'
 
-apply plugin: 'java'
+
+defaultTasks 'jar'
+
 
 dependencies {
-	compile files('lib/resources.jar')
-	compileJava
-	compileTestJava
-	javadoc
-	clean
+	compile files ("lib/resources.jar")
 }
 
 jar {
 	manifest{
 		attributes(
-			"Main-Class" : "edu.gatech.oad.antlab.pkg1.AntLabMain.java",
-			"Class-Path" : '../../lib/resources.jar'
+			"Main-Class": "edu.gatech.oad.antlab.pkg1.AntLabMain.java",
+			"Class-Path": '../../lib/resources.jar'
 		)
 	}
 }
