@@ -7,17 +7,20 @@
 
 apply plugin: 'java'
 
+defaultTasks 'jar'
+
 dependencies {
-    compile files('lib/resources.jar')
-    compileJava
-    compileTestJava
-    javadoc
-    clean
-    jar {
-        manifest {
-            attributes(
-                "Main-Class": 'edu.gatech.oad.antlab.pkg1.AntLabMain.java',
-            )
-        }
+  compile files('lib/resources.jar')
+}
+
+jar {
+    manifest {
+        attributes(
+            "Main-Class": 'edu.gatech.oad.antlab.pkg1.AntLabMain',
+            "Class-Path": '../../lib/resources.jar'
+        )
     }
+
+    //destinationDir = file('.')
+    //archiveName = 'output.jar'
 }
